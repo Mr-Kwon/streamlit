@@ -6,7 +6,7 @@ import datetime
 # Streamlit title
 st.title('사전 학습 2강.')
 st.header('주가 데이터 시각화 (w.Streamlit)')
-st.text('* [사전 학습 1강]- [과제] - [주가 데이터 시각화] 코드 응용')
+st.text('* [사전 학습 1강] - [과제] - [주가 데이터 시각화] 코드 응용')
 st.header('')
 
 st.divider()
@@ -16,14 +16,14 @@ st.title('')
 # User inputs for stock code and data range
 stock_code = st.text_input("종목 코드 입력 : ", '105560')
 st.subheader('')
-data_range = st.date_input("조회일 설정 : ", [datetime.date(2023, 1, 1), datetime.date(2023, 8, 16)])
+date_range = st.date_input("조회일 설정 : ", [datetime.date(2023, 1, 1), datetime.date(2023, 8, 16)])
 
 st.divider()
 st.subheader('데이터 차트')
 st.title('')
 
-start_date = pd.date_range[0].strftime("%Y-%m-%d")
-end_date = pd.date_range[1].strftime("%Y-%m-%d")
+start_date = date_range[0].strftime("%Y-%m-%d")
+end_date = date_range[1].strftime("%Y-%m-%d")
 
 # DataFrame with KRX listing
 df_krx = fdr.StockListing('KRX')
