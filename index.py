@@ -53,6 +53,7 @@ st.divider()
 st.subheader('데이터 시각화')
 st.title('')
 
+
 st.line_chart(df[['5일', '20일', '60일', '120일', '240일']])
 st.header('')
 st.bar_chart(df['Volume'])
